@@ -1,0 +1,78 @@
+@value blue: #409EFF;
+@value green: #67C23A;
+@value yellow: #E6A23C;
+@value red: #F56C6C;
+@value deepRed: #FF4040;
+
+.calendar
+  display: flex;
+  flex-direction: column;
+.calendarContent
+  display: flex;
+  flex-direction: column;
+.calendarBox
+  display: flex;
+  flex-direction: column;
+.calendarWeek
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  >div
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    &:last-child
+      border-right: none;
+      font-weight: bold;
+      color: yellow;
+    &:first-child
+      font-weight: bold;
+      color: yellow;
+.calendarRows
+  display: flex;
+  justify-content: space-around;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+.calendarItem
+  display: flex;
+  flex: 1;
+  height: 100px;
+  flex-direction: column;
+  padding: 3px;
+  border-right: 1px solid #ccc;
+  &:last-child
+    border-right: none;
+    background-color: #f1f1f1;
+  &:first-child
+    background-color: #f1f1f1;
+.carlendarItemNotCurrent
+  composes: calendarItem;
+  opacity: 0.55;
+.calendarDay
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  i
+    margin-right: 5px;
+.calendarHoliday
+  font-size: 12px;
+  max-height: 35px;
+  overflow: hidden;
+.calendarIsHoliday
+  color: yellow
+.calendarIsWork
+  color: red
+.calendarWeather
+  font-size: 14px;
+.calendarHeader
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: baseline;
+.headerMonth
+  font-size: 28px
+.headerCity
+  font-size: 18px;
+.headerBtn
+  display: flex;

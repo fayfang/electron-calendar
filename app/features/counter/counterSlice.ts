@@ -27,7 +27,7 @@ export const incrementIfOdd = (): AppThunk => {
   };
 };
 
-export const incrementAsync = (delay = 1000): AppThunk => (dispatch) => {
+export const incrementAsync = (delay = 5000): AppThunk => (dispatch) => {
   setTimeout(() => {
     dispatch(increment());
   }, delay);
