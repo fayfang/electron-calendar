@@ -76,3 +76,46 @@
   font-size: 18px;
 .headerBtn
   display: flex;
+  div
+    margin-left: 5px;
+  button
+    height: 30px;
+    background: transparent;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    &:first-child
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+    &:last-child
+      border-left: none;
+      border-radius: 0 5px 5px 0;
+    &:active,&:focus
+      outline: none
+.btnActive
+  color: blue
+.calendarMonth
+  display: flex;
+  flex-wrap: wrap;
+  >div
+    width: 25%;
+    height: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-right: none;
+    border-bottom: none;
+    &:hover
+      background: #f1f1f1;
+    &:nth-of-type(n+9)
+      border-bottom: 1px solid #ccc;
+    &:nth-of-type(4n)
+      border-right: 1px solid #ccc;
+.calendarDay
+  display: flex;
+

@@ -11,6 +11,7 @@ const initialState = {
     month: now.getMonth() + 1,
   },
   showType: 'month',
+  selectDay: now.getDate(),
 };
 
 export type STATE = typeof initialState;
@@ -29,6 +30,12 @@ const calendarSlice = createSlice({
       return {
         ...state,
         showType: action.payload,
+      };
+    },
+    updateDay: (state, action) => {
+      return {
+        ...state,
+        selectDay: action.payload,
       };
     },
   },
@@ -56,6 +63,9 @@ export const useDispatchCalendar = () => {
     },
     updateType: (payload: string) => {
       dispatch(calendarSlice.actions.updateType(payload));
+    },
+    updateDay: (payload: number) => {
+      dispatch(calendarSlice.actions.updateDay(payload));
     },
   };
 
