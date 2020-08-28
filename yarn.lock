@@ -9108,10 +9108,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lunar-calendar@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npm.taobao.org/lunar-calendar/download/lunar-calendar-0.1.4.tgz#4303024f889d5d706caf407c45dbdf1ced870be8"
-  integrity sha1-QwMCT4idXXBsr0B8RdvfHO2HC+g=
+lunar-javascript@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.npm.taobao.org/lunar-javascript/download/lunar-javascript-1.0.15.tgz#fd6889c368f0d0575f114a6b1154aa2c4013b356"
+  integrity sha1-/WiJw2jw0FdfEUprEVSqLEATs1Y=
 
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"

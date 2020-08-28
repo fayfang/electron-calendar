@@ -1,23 +1,24 @@
 import React from 'react';
-import LunarCalendar from 'lunar-calendar';
 import { calendarDay } from './calendar.sass';
 import { useGetCalendar } from '../../features/calendar/calendarSlice';
+import { getDayDetail } from './calendar.utils';
+import { useGetWeather } from '../../features/weather/weatherSlice';
 
 export default function Calendar(): JSX.Element {
   const { current, selectDay } = useGetCalendar();
-  const dayDetail = LunarCalendar.solarToLunar(
+  const weatherInfo = useGetWeather();
+  const detailData = getDayDetail(
     current.year,
     current.month,
-    selectDay
+    selectDay,
+    weatherInfo
   );
-
-  console.log(dayDetail);
 
   return (
     <div className={calendarDay}>
-      {current.year}
-      {current.month}
-      {selectDay}
+      {detailData.year}
+      {detailData.month}
+      {detailData.day}
     </div>
   );
 }
